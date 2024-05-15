@@ -1,0 +1,33 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::snapest-bucket/images/*"
+        },
+        {
+            "Sid": "PublicListBucket",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::snapest-bucket/*"
+        },
+        {
+            "Sid": "PublicPutObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::snapest-bucket/*"
+        },
+        {
+            "Sid": "PublicDeleteObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:DeleteObject",
+            "Resource": "arn:aws:s3:::snapest-bucket/*"
+        }
+    ]
+}
